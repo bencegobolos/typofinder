@@ -11,6 +11,10 @@ if [[ ! "$1" =~ ".txt"  ]]; then
   exit
 fi
 
+if [[ ! -d "gen" ]]; then
+  mkdir gen
+fi
+
 # Get the file name, path.
 txt_file="$1"
 txt_file_name="$(basename ${txt_file##*/})"

@@ -1,0 +1,3 @@
+# Ignore files from the in/ (input) folder and gen/ (generated files) folder.
+
+/gen/*

@@ -1,12 +1,14 @@
 #!/bin/bash
 
-if (( $# != 1  )); then
+if (( $# != 2  )); then
   echo "Illegal number of arguments."
+  echo "First argument: .typos file"
+  echo "Second argument: root folder, where you want to search for .tex files."
   exit
 fi
 
-if [[ ! "$1" =~ "all_the_typos.txt"  ]]; then
-  echo "Input argument should be \"all_the_typos.txt\" file."
+if [[ ! "$1" =~ ".typos"  ]]; then
+  echo "Input argument should be .typos file."
   exit
 fi
 
@@ -16,7 +18,7 @@ log_file="${log_file%.*}.log"
 # texfiles: all the files ending with .tex
 # spell_typos: file with typos found.
 # findit.txt: LOG file containing where is a typo (which file, which line).
-texfiles=(`find ../ -name *.tex`)
+texfiles=(`find $2 -name *.tex`)
 readarray typos < $1
 printf "LOG file for typo's found.\n\n" > "$log_file"
 
@@ -38,4 +40,3 @@ do
     done
   done
 done
-

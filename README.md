@@ -11,4 +11,5 @@ NOTE: if you find a typo, just put it in a new line in your ".typos" file, upper
 * Run findtextypo.sh with two parameters; first should be the .typos file, second should be the root folder where you want to find and check .tex files.
 
 Test if I can push this change.
+This is pushed through my VM.
 

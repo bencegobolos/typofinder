@@ -9,3 +9,6 @@ NOTE: if you find a typo, just put it in a new line in your ".typos" file, upper
 * Run typofinder.sh. There must be one argument; the .txt file you want to check. This script will make a folder - named after the .txt file - in /gen where you can find the results.
 * You have to make a .typos file (basically anywhere, but I suggest you to put it in gen/{your_folder}) file based on the .typo file generated in gen/{your_folder}/*.typo
 * Run findtextypo.sh with two parameters; first should be the .typos file, second should be the root folder where you want to find and check .tex files.
+
+Test if I can push this change.
+
